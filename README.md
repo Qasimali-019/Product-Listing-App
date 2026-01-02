@@ -214,28 +214,6 @@ Frontend runs at:
 
 ---
 
-## 🖼 Screenshots
-image-1.png
-C:\Users\user\OneDrive\Desktop\FS P 2\image-1.png
-C:\Users\user\OneDrive\Desktop\FS P 2\image-2.png
-C:\Users\user\OneDrive\Desktop\FS P 2\image-3.png
-C:\Users\user\OneDrive\Desktop\FS P 2\image-4.png
-C:\Users\user\OneDrive\Desktop\FS P 2\image-5.png
-C:\Users\user\OneDrive\Desktop\FS P 2\image-6.png
-C:\Users\user\OneDrive\Desktop\FS P 2\image-7.png
-C:\Users\user\OneDrive\Desktop\FS P 2\image-8.png
-C:\Users\user\OneDrive\Desktop\FS P 2\image-9.png
-C:\Users\user\OneDrive\Desktop\FS P 2\image-10.png
-* Home / Product Grid
-* Product Detail Page
-* Cart Page
-* Checkout Page
-* Admin Login
-* Admin Dashboard
-* SQLite Database View
-
----
-
 ## 🧪 Testing
 
 Manual testing performed for:
