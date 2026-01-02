@@ -215,7 +215,7 @@ Frontend runs at:
 ---
 
 ## 🖼 Screenshots
-C:\Users\user\OneDrive\Desktop\FS P 2\image.png
+image-1.png
 C:\Users\user\OneDrive\Desktop\FS P 2\image-1.png
 C:\Users\user\OneDrive\Desktop\FS P 2\image-2.png
 C:\Users\user\OneDrive\Desktop\FS P 2\image-3.png
