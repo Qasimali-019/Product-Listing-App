@@ -1,178 +1,288 @@
+# React Product Listing App
 
+A full-stack e-commerce platform built with React, Node.js/Express, and SQLite.
+Complete product management, role-based access control, cart and checkout flows, and order tracking — in a clean, responsive UI.
 
-# 🛒 React Product Listing App
-
-A modern, full-stack e-commerce product listing application built with **React**, **Node.js/Express**, and **SQLite**.  
-The app supports dynamic product management, user/admin roles, image uploads, cart and checkout flows, and order management with a responsive UI.
+[![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)](https://expressjs.com/)
+[![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)](https://sqlite.org/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](./LICENSE)
 
 ---
 
-## 📌 Table of Contents
+## Table of Contents
 
-- [Project Overview](#project-overview)
+- [Overview](#overview)
+- [Screenshots](#screenshots)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
-- [System Design](#system-design)
+- [Architecture](#architecture)
 - [Database Schema](#database-schema)
-- [Installation & Setup](#installation--setup)
-- [Usage](#usage)
-- [Screenshots](#screenshots)
-- [Testing](#testing)
-- [Deployment](#deployment)
-- [Future Enhancements](#future-enhancements)
-- [Conclusion](#conclusion)
-- [License](#license)
+- [API Reference](#api-reference)
+- [Getting Started](#getting-started)
+- [Roadmap](#roadmap)
 
 ---
 
-## 📖 Project Overview
+## Overview
 
-This project demonstrates a complete **e-commerce workflow**, including:
+This project demonstrates a complete e-commerce workflow from browsing to order confirmation, with a separate admin panel for full product and category management.
 
-- Product listing with images, price, description, and category
-- Dynamic category management
-- User and admin roles with protected features
-- Cart, checkout, and order summary
-- Fully responsive UI for mobile and desktop
-- Backend-driven data management via REST APIs
+What this project covers:
+
+- Product listing with images, price, description, and category filtering
+- User-facing cart, checkout, and order confirmation flow
+- Admin panel with full CRUD on products and categories
+- File upload handling via Multer
+- RESTful backend with clean separation of concerns
+- Persistent SQLite storage — zero configuration required
 
 ---
 
-## ✨ Features
+## Screenshots
 
-### 👤 User Features
-- Browse products by category
-- Search products
-- View product details
-- Add products to cart
-- Update or remove cart items
+<table>
+   <tr>
+    <td><img src="image.png" width="100%"/></td>
+
+  </tr>
+  <tr>
+    <td><img src="image-1.png" width="100%"/></td>
+    <td><img src="image-2.png" width="100%"/></td>
+  </tr>
+  <tr>
+    <td><img src="image-3.png" width="100%"/></td>
+    <td><img src="image-4.png" width="100%"/></td>
+  </tr>
+ <tr>
+    <td><img src="image-5.png" width="100%"/></td>
+    <td><img src="image-6.png" width="100%"/></td>
+  </tr>
+   <tr>
+    <td><img src="image-7.png" width="100%"/></td>
+    <td><img src="image-8.png" width="100%"/></td>
+  </tr>
+   <tr>
+    <td><img src="image-9.png" width="100%"/></td>
+    <td><img src="image-10.png" width="100%"/></td>
+  </tr>
+</table>
+
+### User Interface
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="./screenshots/product-listing.png" alt="Product Listing" width="100%" />
+      <br /><sub><b>Product Grid with Category Filter</b></sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="./screenshots/product-detail.png" alt="Product Detail" width="100%" />
+      <br /><sub><b>Product Detail Page</b></sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="./screenshots/cart.png" alt="Cart" width="100%" />
+      <br /><sub><b>Cart Management</b></sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="./screenshots/checkout.png" alt="Checkout" width="100%" />
+      <br /><sub><b>Checkout & Order Confirmation</b></sub>
+    </td>
+  </tr>
+</table>
+
+### Admin Panel
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="./screenshots/admin-login.png" alt="Admin Login" width="100%" />
+      <br /><sub><b>Admin Login</b></sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="./screenshots/admin-dashboard.png" alt="Admin Dashboard" width="100%" />
+      <br /><sub><b>Product Management</b></sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="./screenshots/admin-orders.png" alt="Order Management" width="100%" />
+      <br /><sub><b>Order Management</b></sub>
+    </td>
+  </tr>
+</table>
+
+---
+
+## Features
+
+### User
+
+- Browse and search products by category
+- View full product detail pages
+- Add, update, and remove cart items
 - Checkout with shipment details
-- View order summary and confirmation
+- Order summary and confirmation
 
-### 🛠 Admin Features
-- Secure admin login
+### Admin
+
+- Secure admin login (separate from user flow)
 - Add, edit, and delete products
 - Upload product images
 - Manage product categories
 - View all customer orders
 
-### ⚙️ General Features
-- RESTful backend APIs
-- Image upload using Multer
-- SQLite database for persistent storage
-- Responsive UI using Tailwind CSS
-- Modular and reusable components
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| Frontend | React (Class & Functional Components), React Router |
+| Styling | Tailwind CSS |
+| HTTP Client | Axios |
+| Backend | Node.js, Express.js |
+| File Uploads | Multer |
+| Database | SQLite |
 
 ---
 
-## 🧰 Tech Stack
+## Architecture
 
-### Frontend
-- React (Class & Functional Components)
-- React Router
-- Tailwind CSS
-- Axios
+```
+frontend/                        backend/
+├── src/                         ├── server.js
+│   ├── App.js                   ├── routes/
+│   ├── components/              │   ├── products.js
+│   │   ├── Layout.js            │   ├── categories.js
+│   │   ├── Sidebar.js           │   ├── orders.js
+│   │   ├── ProductGrid.js       │   └── admin.js
+│   │   ├── ProductDetail.js     ├── uploads/
+│   │   ├── Cart.js              └── products.db
+│   │   ├── Checkout.js
+│   │   ├── AdminLogin.js
+│   │   └── AdminDashboard.js
+│   └── index.js
+```
 
-### Backend
-- Node.js
-- Express.js
-- Multer
-- CORS
+### Request Flow
 
-### Database
-- SQLite
-- SQLite Studio (optional)
-
----
-
-## 🏗 System Design
-
-### Frontend Components
-
-| Component | Description |
-|---------|------------|
-| `App.js` | Main routing and state management |
-| `Layout.js` | Layout with header and sidebar |
-| `Sidebar.js` | Collapsible navigation sidebar |
-| `ProductGrid.js` | Responsive product listing |
-| `ProductDetail.js` | Product details and add-to-cart |
-| `Cart.js` | Cart management and summary |
-| `Checkout.js` | Order confirmation |
-| `AdminLogin.js` | Admin authentication |
-| `AdminDashboard.js` | Product & category management |
+```
+Browser
+  └── React  (port 3000)
+        └── Axios HTTP requests
+              └── Express API  (port 5000)
+                    ├── SQLite  (products.db)
+                    └── /uploads  (static image files)
+```
 
 ---
 
-### Backend
+## Database Schema
 
-#### Database Tables
-- `products`
-- `categories`
-- `orders`
-- `order_items`
-- `admins`
+### products
 
-#### API Endpoints
+```sql
+CREATE TABLE products (
+  id          INTEGER PRIMARY KEY AUTOINCREMENT,
+  name        TEXT    NOT NULL,
+  price       REAL    NOT NULL,
+  description TEXT,
+  category_id INTEGER REFERENCES categories(id),
+  image       TEXT
+);
+```
+
+### categories
+
+```sql
+CREATE TABLE categories (
+  id   INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL UNIQUE
+);
+```
+
+### orders
+
+```sql
+CREATE TABLE orders (
+  id            INTEGER PRIMARY KEY AUTOINCREMENT,
+  customer_name TEXT      NOT NULL,
+  address       TEXT      NOT NULL,
+  total         REAL      NOT NULL,
+  created_at    TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+### order_items
+
+```sql
+CREATE TABLE order_items (
+  id         INTEGER PRIMARY KEY AUTOINCREMENT,
+  order_id   INTEGER REFERENCES orders(id),
+  product_id INTEGER REFERENCES products(id),
+  quantity   INTEGER NOT NULL,
+  price      REAL    NOT NULL
+);
+```
+
+### admins
+
+```sql
+CREATE TABLE admins (
+  id       INTEGER PRIMARY KEY AUTOINCREMENT,
+  username TEXT NOT NULL UNIQUE,
+  password TEXT NOT NULL
+);
+```
+
+---
+
+## API Reference
+
+### Products
+
+| Method | Endpoint | Auth | Description |
+|--------|----------|------|-------------|
+| GET | `/api/products` | Public | Fetch all products |
+| POST | `/api/products` | Admin | Add a new product |
+| PUT | `/api/products/:id` | Admin | Update a product |
+| DELETE | `/api/products/:id` | Admin | Delete a product |
+
+### Categories
+
+| Method | Endpoint | Auth | Description |
+|--------|----------|------|-------------|
+| GET | `/api/categories` | Public | Fetch all categories |
+| POST | `/api/categories` | Admin | Add a category |
+| DELETE | `/api/categories/:id` | Admin | Remove a category |
+
+### Orders
+
+| Method | Endpoint | Auth | Description |
+|--------|----------|------|-------------|
+| POST | `/api/orders` | Public | Place a new order |
+| GET | `/api/orders` | Admin | View all orders |
+
+### Auth & Upload
 
 | Method | Endpoint | Description |
-|------|----------|-------------|
-| GET | `/api/products` | Fetch all products |
-| POST | `/api/products` | Add product (admin) |
-| PUT | `/api/products/:id` | Update product |
-| DELETE | `/api/products/:id` | Delete product |
-| GET | `/api/categories` | Fetch categories |
-| POST | `/api/orders` | Place order |
-| GET | `/api/orders` | View all orders |
+|--------|----------|-------------|
 | POST | `/api/admin-login` | Admin login |
-| POST | `/api/upload` | Upload product images |
+| POST | `/api/upload` | Upload product image |
 
 ---
 
-## 🗄 Database Schema
-
-### Products Table
-```sql
-id INTEGER PRIMARY KEY
-name TEXT
-price REAL
-description TEXT
-category_id INTEGER
-image TEXT
-````
-
-### Orders Table
-
-```sql
-id INTEGER PRIMARY KEY
-customer_name TEXT
-address TEXT
-total REAL
-created_at TIMESTAMP
-```
-
-### Order Items Table
-
-```sql
-id INTEGER PRIMARY KEY
-order_id INTEGER
-product_id INTEGER
-quantity INTEGER
-price REAL
-```
-
----
-
-## ⚙️ Installation & Setup
+## Getting Started
 
 ### Prerequisites
 
-* Node.js (v14+)
-* npm
-* SQLite Studio (optional)
+- Node.js v14+
+- npm
 
----
-
-### 🔧 Backend Setup
+### Backend
 
 ```bash
 cd backend
@@ -180,12 +290,9 @@ npm install
 node server.js
 ```
 
-Backend runs at:
-`http://localhost:5000`
+Runs at `http://localhost:5000`
 
----
-
-### 🎨 Frontend Setup
+### Frontend
 
 ```bash
 cd frontend
@@ -193,76 +300,31 @@ npm install
 npm start
 ```
 
-Frontend runs at:
-`http://localhost:3000`
+Runs at `http://localhost:3000`
 
----
-
-## 🚀 Usage
-
-### User
-
-* Browse products
-* Add items to cart
-* Checkout and confirm order
-
-### Admin
-
-* Login via `/admin-login`
-* Manage products and categories
-* View customer orders
-
----
-
-## 🧪 Testing
-
-Manual testing performed for:
-
-* Product CRUD operations
-* Category management
-* Cart and checkout flows
-* Image upload and display
-* Admin login/logout
-* Responsive UI testing
-* Database integrity via SQLite Studio
-
----
-
-## 🌍 Deployment
-
-* Frontend: React app (port 3000)
-* Backend: Node.js/Express (port 5000)
-* Database: SQLite (`products.db`)
-
----
-
-## 🔮 Future Enhancements
-
-* User authentication and order history
-* Payment gateway integration
-* Pagination and advanced filtering
-* JWT-based authentication
-* Cloud image storage
-* Order status tracking
-
----
-
-## ✅ Conclusion
-
-* Full-stack, database-driven e-commerce solution
-* Clean separation of frontend and backend
-* RESTful API architecture
-* Responsive, user-friendly UI
-* Secure admin features
-* Follows SDLC best practices
-
----
-
-## 📄 License
-
-MIT License
+### Default Admin Credentials
 
 ```
+Username: admin
+Password: admin123
+```
+
+> Change these in the `admins` table before any public deployment.
 
 ---
 
+## Roadmap
+
+- [ ] JWT-based authentication for users and admins
+- [ ] User accounts with order history
+- [ ] Payment gateway (Stripe)
+- [ ] Pagination and advanced product filtering
+- [ ] Cloud image storage (Cloudinary / S3)
+- [ ] Order status tracking (Pending / Shipped / Delivered)
+- [ ] Deployed demo (Vercel + Railway)
+
+---
+
+## License
+
+MIT — see [LICENSE](./LICENSE) for details.
