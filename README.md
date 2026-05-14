@@ -70,50 +70,6 @@ What this project covers:
   </tr>
 </table>
 
-### User Interface
-
-<table>
-  <tr>
-    <td align="center" width="50%">
-      <img src="./screenshots/product-listing.png" alt="Product Listing" width="100%" />
-      <br /><sub><b>Product Grid with Category Filter</b></sub>
-    </td>
-    <td align="center" width="50%">
-      <img src="./screenshots/product-detail.png" alt="Product Detail" width="100%" />
-      <br /><sub><b>Product Detail Page</b></sub>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="50%">
-      <img src="./screenshots/cart.png" alt="Cart" width="100%" />
-      <br /><sub><b>Cart Management</b></sub>
-    </td>
-    <td align="center" width="50%">
-      <img src="./screenshots/checkout.png" alt="Checkout" width="100%" />
-      <br /><sub><b>Checkout & Order Confirmation</b></sub>
-    </td>
-  </tr>
-</table>
-
-### Admin Panel
-
-<table>
-  <tr>
-    <td align="center" width="33%">
-      <img src="./screenshots/admin-login.png" alt="Admin Login" width="100%" />
-      <br /><sub><b>Admin Login</b></sub>
-    </td>
-    <td align="center" width="33%">
-      <img src="./screenshots/admin-dashboard.png" alt="Admin Dashboard" width="100%" />
-      <br /><sub><b>Product Management</b></sub>
-    </td>
-    <td align="center" width="33%">
-      <img src="./screenshots/admin-orders.png" alt="Order Management" width="100%" />
-      <br /><sub><b>Order Management</b></sub>
-    </td>
-  </tr>
-</table>
-
 ---
 
 ## Features
